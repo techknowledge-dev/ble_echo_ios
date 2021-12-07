@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EchobackPeripheral" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-WZ-VIl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Echoback BLE sample" id="8NH-ZR-FzE"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4u-4Q-Cnz">
+                                <rect key="frame" x="138" y="185" width="139" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="アドバタイズ開始"/>
+                                <connections>
+                                    <action selector="onStartAdvertize" destination="BYZ-38-t0r" eventType="touchUpInside" id="TRU-7u-8oB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uL-Jy-rUc">
+                                <rect key="frame" x="138" y="277" width="139" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="アドバタイズ終了"/>
+                                <connections>
+                                    <action selector="onStopAdvertize" destination="BYZ-38-t0r" eventType="touchUpInside" id="JqM-xX-kkY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LGH-WZ-VIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CO1-X0-Vls"/>
+                            <constraint firstItem="LGH-WZ-VIl" firstAttribute="centerX" secondItem="B4u-4Q-Cnz" secondAttribute="centerX" id="FOn-KD-519"/>
+                            <constraint firstItem="B4u-4Q-Cnz" firstAttribute="trailing" secondItem="2uL-Jy-rUc" secondAttribute="trailing" id="VBB-mq-IrW"/>
+                            <constraint firstItem="B4u-4Q-Cnz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="Y78-bT-1cb"/>
+                            <constraint firstItem="LGH-WZ-VIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hqE-OY-cFf"/>
+                            <constraint firstItem="B4u-4Q-Cnz" firstAttribute="top" secondItem="LGH-WZ-VIl" secondAttribute="bottom" constant="97" id="ud4-eh-aR7"/>
+                            <constraint firstItem="2uL-Jy-rUc" firstAttribute="top" secondItem="B4u-4Q-Cnz" secondAttribute="bottom" constant="61" id="yrV-zH-LBQ"/>
+                            <constraint firstItem="B4u-4Q-Cnz" firstAttribute="leading" secondItem="2uL-Jy-rUc" secondAttribute="leading" id="yu8-Xy-XHI"/>
+                            <constraint firstItem="LGH-WZ-VIl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zcT-Yf-Xra"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startAdvertizeButton" destination="B4u-4Q-Cnz" id="P88-yc-DHv"/>
+                        <outlet property="stopAdvertizeButton" destination="2uL-Jy-rUc" id="lMO-23-rcU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
